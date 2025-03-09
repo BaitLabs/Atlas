@@ -1,0 +1,67 @@
+[package]
+name = "atlas"
+version = "0.1.0"
+edition = "2021"
+description = "A powerful AI framework for building effective agents using Model Context Protocol"
+authors = ["Atlas Team"]
+license = "MIT"
+repository = "https://github.com/atlas-ai/atlas"
+documentation = "https://docs.rs/atlas"
+readme = "README.md"
+keywords = ["ai", "agents", "mcp", "machine-learning"]
+categories = ["ai", "development-tools"]
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.32", features = ["full"] }
+async-trait = "0.1"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json"] }
+
+# Utilities
+futures = "0.3"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Configuration
+config = "0.13"
+dotenv = "0.15"
+
+# Type utilities
+derive_more = "0.99"
+strum = { version = "0.25", features = ["derive"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockall = "0.11"
+pretty_assertions = "1.4"
+test-log = "0.2"
+
+[features]
+default = []
+openai = []
+anthropic = []
+
+[workspace]
+members = [
+    "crates/atlas-core",
+    "crates/atlas-mcp",
+    "crates/atlas-agent",
+]
+
+[[example]]
+name = "simple_agent"
+path = "examples/simple_agent.rs"
+
+[[example]]
+name = "mcp_server"
+path = "examples/mcp_server.rs"

@@ -1,0 +1,87 @@
+# Rust build artifacts
+/target/
+**/target/
+Cargo.lock
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.iml
+
+# Environment files
+.env
+.env.*
+
+# Generated documentation
+/doc/
+/docs/target/
+
+# Test coverage
+coverage/
+*.profraw
+
+# Debug files
+*.log
+*.log.*
+debug/
+
+# Dependencies
+/vendor/
+
+# Build output
+/dist/
+/build/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*~
+
+# Local development files
+local.rs
+local.toml
+config.local.toml
+
+# Generated files
+*.generated.rs
+*.gen.rs
+
+# MCP server persistence
+*.mcp.json
+*.mcp.db
+
+# Memory persistence
+*.memory.json
+*.memory.db
+
+# Test artifacts
+*.test.rs
+test-results/
+
+# Benchmark results
+benches/results/
+*.bench.json
+
+# Documentation drafts
+docs/drafts/
+*.draft.md
+
+# macOS specific
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux specific
+.directory
+.Trash-*

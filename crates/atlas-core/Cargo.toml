@@ -1,0 +1,33 @@
+[package]
+name = "atlas-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core components for the Atlas AI framework"
+authors = ["Atlas Team"]
+license = "MIT"
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.32", features = ["full"] }
+async-trait = "0.1"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Utilities
+futures = "0.3"
+tracing = "0.1"
+
+# Type utilities
+derive_more = "0.99"
+uuid = { version = "1.4", features = ["v4", "serde"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
+mockall = "0.11"
+pretty_assertions = "1.4"
